@@ -18,10 +18,10 @@
             <h1 style="margin:0;padding:0;">ABC影城</h1>
         </div>
         <div id="top2">
-            <a href="index.htm">首頁</a>
-            <a href="order.htm">線上訂票</a>
+            <a href="index.php">首頁</a>
+            <a href="?do=order">線上訂票</a>
             <a href="#">會員系統</a>
-            <a href="back.htm">管理系統</a>
+            <a href="back.php">管理系統</a>
         </div>
         <div id="text"> <span class="ct">最新活動</span>
             <marquee direction="right">
