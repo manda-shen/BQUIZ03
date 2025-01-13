@@ -8,7 +8,7 @@ $passDay=floor(($today-$ondate)/(60*60*24));
 
 for($i=$passDay;$i<3;$i++){
     $date=date("Y-m-d",strtotime("+$i days",$ondate));
-    echo "<option value=''>";
+    echo "<option value='$date'>";
     echo $date;
     echo "</option>";
 }
