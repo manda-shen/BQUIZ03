@@ -141,6 +141,15 @@
       break;
     }
   }
+
+  let total=$(".icon").length;
+  let p=0;
+  $(".left,.right").on("click",function(){
+    if((p+1)<=(total-4)){
+      p++;
+      $(".icon").animate({right:85*p});
+    }
+  })
 </script>
     <div class="half">
       <h1>院線片清單</h1>
