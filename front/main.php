@@ -145,11 +145,20 @@
   let total=$(".icon").length;
   let p=0;
   $(".left,.right").on("click",function(){
-    if((p+1)<=(total-4)){
-      p++;
-      $(".icon").animate({right:85*p});
+    if($(this).hasClass('left')){
+      /*if(p-1>=0){
+        p--;
+      }*/
+     p=(p-1>=0)?p-1:0;
+    }else{
+      /*if(p+1<=total-4){
+        p++;
+      }*/
+     p=(p+1<=total-4)?p+1:total-4;
     }
+    $(".icon").animate({right:p*85})
   })
+
 </script>
     <div class="half">
       <h1>院線片清單</h1>
