@@ -27,7 +27,7 @@
 </style>
 
 <h3 class="ct">線上訂票</h3>
-
+<form action="#">
 <table class="order-form">
     <tr>
         <td>電影：</td>
@@ -49,3 +49,14 @@
         <!-- <td></td> -->
     </tr>
 </table>
+</form>
+
+<script>
+    getMovies();
+    function getMovies(){
+        $.get("api/get_movies.php",function(movies){
+            console.log(movies);
+            $("#movie").html(movies);
+        })
+    }
+</script>
