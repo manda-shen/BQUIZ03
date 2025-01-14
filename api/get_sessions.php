@@ -3,6 +3,7 @@
 $movie=$Movie->find($_GET['movie']);
 $date=$_GET['date'];
 
+
 $sess=[
     '1'=>"14:00~16:00",
     '2'=>"16:00~18:00",
@@ -10,14 +11,15 @@ $sess=[
     '4'=>"20:00~22:00",
     '5'=>"22:00~24:00"
 ];
-
 $now=date("G")-13;
 
-$start=ceil($now/2)+1;
+$start=($now>0)?ceil($now/2)+1:1;
+
 $seats=20;
 
 for($i=$start;$i<=5;$i++){
+
     echo "<option value='{$sess[$i]}'>";
-    echo "{$sess[$i]}剩餘座位 $seats";
+    echo "  {$sess[$i]} 剩餘座位 $seats";
     echo "</option>";
 }
