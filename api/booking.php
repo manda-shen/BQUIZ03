@@ -89,7 +89,8 @@
         // console.log(movie)
         // consold.log(seats)
         $.post("api/checkout.php",movie,function(res){
-            console.log(res)
+            // console.log(res)
+            $("#mm").html(res);
         })
     }
 </script>
